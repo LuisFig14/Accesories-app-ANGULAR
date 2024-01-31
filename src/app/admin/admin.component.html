@@ -1,3 +1,55 @@
 <app-navigation></app-navigation> <!--navigation-->
 
+<br>
+<h1 class="text-center">Bienvenido</h1>
+<br>
 
+<div class="container">
+
+    <table class="table table-bordered border border-info-subtle">
+
+        <thead>
+            <tr class="text-center">
+                <th scope="col"></th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Color</th>
+                <th scope="col">Clasificación</th>
+                <th scope="col">Material</th>
+                <th scope="col">Medidas</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Eliminar</th>
+            </tr>
+        </thead>
+    
+        <tbody>
+    
+            <tr *ngFor="let admin of adminAccesories">
+                <th>{{admin.id}}</th>
+                <td>{{admin.name}}</td>
+                <td>{{admin.description}}</td>
+                <td>{{admin.color}}</td>
+                <td>{{admin.classification}}</td>
+                <td>{{admin.material}}</td>
+                <td>{{admin.measure}}</td>
+                <td>${{admin.price}}</td>
+                <td class="text-center"><button type="button" name="button" class="btn btn-warning btn-sm">Editar</button></td>
+                <td class="text-center"><button type="button" name="button" class="btn btn-danger btn-sm">Eliminar</button></td>
+                
+            </tr>
+            
+        
+        </tbody>
+    </table>
+
+    <div class="position-relative">
+        <div class="position-absolute top-0 end-0">
+            <button type="button" class="btn btn-primary " routerLink="/Admin/Crear">Nuevo +</button>
+        </div>
+    </div>
+
+
+</div>
+
+<app-footer></app-footer>

@@ -12,6 +12,7 @@ import { ContactComponent } from './contact/contact.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { FooterComponent } from './footer/footer.component';
 import { AdminComponent } from './admin/admin.component';
+import { FormAdminComponent } from './admin/form-admin.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AdminComponent } from './admin/admin.component';
     ContactComponent,
     NavigationComponent,
     FooterComponent,
-    AdminComponent
+    AdminComponent,
+    FormAdminComponent
   ],
   imports: [
     BrowserModule,

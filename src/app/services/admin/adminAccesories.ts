@@ -1,6 +1,4 @@
-import { AnonymousSubject } from "rxjs/internal/Subject";
-
-export class adminAccesories {
+export class AdminAccesories {
 
     id: any;
     name: any;
