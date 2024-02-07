@@ -26,5 +26,13 @@ export class AdminService {
   create(admin:AdminAccesories):Observable<AdminAccesories> {
     return this.http.post<AdminAccesories>(this.url, admin);
   }
+
+  update(){
+
+  }
+
+  delete(){
+
+  }
   
 }

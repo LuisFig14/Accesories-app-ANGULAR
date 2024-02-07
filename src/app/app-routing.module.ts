@@ -10,7 +10,8 @@ const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'Contact', component: ContactComponent},
   {path: 'Admin', component: AdminComponent},
-  {path: 'Admin/Crear', component: FormAdminComponent}
+  {path: 'Admin/Crear', component: FormAdminComponent},
+  {path: 'Admin/Editar/:id', component: FormAdminComponent}
 
 ];
 
