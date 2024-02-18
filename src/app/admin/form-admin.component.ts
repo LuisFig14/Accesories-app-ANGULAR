@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AdminAccesories } from '../services/admin/AdminAccesories';
 import { AdminService } from '../services/admin/admin.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -8,9 +8,9 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './form-admin.component.html',
   styleUrls: ['./form-admin.component.css']
 })
-export class FormAdminComponent {
+export class FormAdminComponent implements OnInit{
 
-  admin:AdminAccesories = new AdminAccesories();
+  admin:AdminAccesories = new AdminAccesories(); //Instancia de la clase AdminAccesories 
 
   constructor(private adminService:AdminService, private router:Router, private activatedRouter:ActivatedRoute){ //Se le pasa el servicio y la ruta| Activaded route se utiliza para acceder a la información de la ruta activa
   }
@@ -39,6 +39,12 @@ export class FormAdminComponent {
   create():void{
     this.adminService.create(this.admin).subscribe(
       res=>this.router.navigate(['Admin'])
+    );
+  }
+
+  update():void{
+    this.adminService.update(this.admin).subscribe(
+      e=>this.router.navigate(['Admin'])
     );
   }
 

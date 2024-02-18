@@ -59,11 +59,16 @@
             </div>
             <br>
 
-            <button type="button" class="btn btn-outline-success" (click)="create()" >Crear</button>
+            <button type="button" class="btn btn-outline-success" (click)="create()" *ngIf="!admin.id else elseBlock">Crear</button> <!--si no tiene id muestra esto si no muestra elseBlock-->
+            
             <br>
             <br>
 
-            <button class="btn border" type="button" [routerLink]="['/Admin']">Regresar</button>
+            <ng-template #elseBlock>
+                <button type="button" class="btn btn-outline-success" (click)="update()">Actualizar</button>
+            </ng-template>
+            
+            <button class="btn border" role="button" [routerLink]="['/Admin']">Regresar</button>
 
         </form>
 

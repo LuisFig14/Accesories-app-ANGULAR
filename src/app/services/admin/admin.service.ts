@@ -27,12 +27,12 @@ export class AdminService {
     return this.http.post<AdminAccesories>(this.url, admin);
   }
 
-  update(){
-
+  update(admin:AdminAccesories):Observable<AdminAccesories> {
+    return this.http.put<AdminAccesories> (this.url, admin);
   }
 
-  delete(){
-
+  delete(id:any):Observable<AdminAccesories>{
+    return this.http.delete<AdminAccesories>(this.url + '/' + id);
   }
   
 }
